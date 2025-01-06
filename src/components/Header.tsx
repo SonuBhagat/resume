@@ -3,7 +3,7 @@ import Contact from "./Contact";
 
 export default function Header() {
   return (
-    <header className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+    <header className="bg-black text-white py-20">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto flex items-center">
           {/* Image Section */}
@@ -19,7 +19,7 @@ export default function Header() {
               SQL & React (Beginner)
             </h2>
 
-            <p className="text-lg mb-8 max-w-2x2 text-justify">
+            <p className="text-lg mb-8 max-w-2x1 text-justify">
               Multifaceted Digital Marketing Strategist with over 3+ years of
               experience specializing in Google Ads, Facebook Ads, SEO & SEM,
               Graphic Design, UI/UX Design, WordPress, and Social Media
