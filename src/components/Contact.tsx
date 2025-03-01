@@ -5,19 +5,19 @@ import { contactInfo } from '../data/contact';
 export default function Contact() {
   return (
     <div className="flex flex-wrap gap-4 items-center">
-      <a href={`mailto:${contactInfo.email}`} className="flex items-center gap-2 hover:text-blue-200 transition-colors">
+      <a href={`mailto:${contactInfo.email}`} className="text-lg flex items-center gap-2 hover:text-blue-200 transition-colors">
         <Mail className="w-5 h-5" />
         <span>{contactInfo.email}</span>
       </a>
-      <a href={`tel:${contactInfo.phone}`} className="flex items-center gap-2 hover:text-blue-200 transition-colors">
+      <a href={`tel:${contactInfo.phone}`} className="flex text-lg items-center gap-2 hover:text-blue-200 transition-colors">
         <Phone className="w-5 h-5" />
         <span>{contactInfo.phone}</span>
       </a>
-      <div className="flex items-center gap-2">
+      <div className="flex items-center text-lg gap-2">
         <MapPin className="w-5 h-5" />
         <span>{contactInfo.address}</span>
       </div>
-      <div className="flex gap-4">
+      <div className="flex text-lg gap-4">
         <a href={contactInfo.github} className="hover:text-blue-200 transition-colors">
           <Github className="w-5 h-5" />
         </a>
