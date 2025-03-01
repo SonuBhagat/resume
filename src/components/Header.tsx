@@ -10,7 +10,7 @@ export default function Header() {
           {/* Text Section */}
           <div className="ml-6">
             <h1 className="text-3xl md:text-5xl font-bold mb-4 tetxt-lg">
-              Sonu Bhagat
+              SONU BHAGAT
             </h1>
             <h2 className="text-sm md:text-2xl mb-6 text-justify">
               Digital Marketing Specialist | PPC Ads Specialist | SEO/SEM Expert

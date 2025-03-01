@@ -13,7 +13,8 @@ export const skillsData = [
       'Mailchimp',
       'SEMrush',
       'Ahrefs',
-      'SimilarWeb'
+      'SimilarWeb',
+      'Meta Pixel'
     ]
   },
   {
@@ -23,12 +24,8 @@ export const skillsData = [
       'Google Ads',
       'Facebook Ads Manager',
       'LinkedIn Ads',
-      'Twitter Ads',
-      'Adzooma',
-      'Optmyzr',
-      'WordStream',
-      'Supermetrics',
-      'Google Data Studio'
+      'X Ads (Formerly know as Twitter)',
+
     ]
   },
   {
@@ -43,7 +40,9 @@ export const skillsData = [
       'Keyword Planner',
       'AnswerThePublic',
       'Sitebulb',
-      'DeepCrawl'
+      'DeepCrawl',
+      'Off-page SEO',
+      'On-page SEO'
     ]
   },
   {
@@ -51,15 +50,11 @@ export const skillsData = [
     icon: Paintbrush,
     skills: [
       'Adobe Photoshop',
-      'Illustrator',
+      'Adobe Illustrator',
+      'Corel Draw',
       'Canva',
       'Figma',
-      'Adobe XD',
-      'Sketch',
-      'InVision',
-      'Proto.io',
-      'Zeplin',
-      'Marvel App'
+      'Adobe Indesign'
     ]
   },
   {
@@ -67,15 +62,9 @@ export const skillsData = [
     icon: Database,
     skills: [
       'WordPress',
-      'Joomla',
-      'Drupal',
       'Elementor',
       'Divi',
       'WPBakery',
-      'UpdraftPlus',
-      'Duplicator',
-      'Yoast SEO',
-      'Rank Math'
     ]
   },
   {
@@ -94,6 +83,6 @@ export const skillsData = [
   {
     category: 'Frontend Development',
     icon: Share,
-    skills: ['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'React']
+    skills: ['HTML', 'CSS', 'Bootstrap-5', 'JavaScript', 'ReactJS', 'Tailwind CSS']
   }
 ];

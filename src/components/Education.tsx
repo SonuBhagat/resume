@@ -5,19 +5,19 @@ const education = [
     degree: 'Bachelor of Computer Application',
     school: 'Mahatma Jyotiba Phule Rohilkhand University, Bareilly',
     period: 'July 2021',
-    description: 'In 2021, I completed my BCA with a mark of 62.64 percent.',
+    description: 'I successfully completed my Bachelor of Computer Applications (BCA), achieving a 62.64%, which reflects my proficiency in computer science, software development, and related technologies.',
   },
   {
     degree: '12th',
     school: "Blooming Dales' Modern School, Rudrapur",
     period: 'March 2017',
-    description: 'In 2017, I completed my CBSE intermediate with a mark of 63 percent.',
+    description: 'I successfully completed my CBSE Intermediate, achieving a 63%, demonstrating a solid academic foundation in core subjects.',
   },
   {
     degree: '10th',
     school: "Blooming Dales' Modern School, Rudrapur",
     period: 'March 2015',
-    description: 'In 2015, I completed my CBSE High School with a mark of 74 percent.',
+    description: 'I successfully completed my CBSE High School, achieving a 74%, showcasing strong academic performance and foundational knowledge.',
   },
 ];
 
