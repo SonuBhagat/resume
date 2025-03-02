@@ -4,7 +4,7 @@ import Contact from "./Contact";
 export default function Header() {
 
   const openResume = () => {
-    window.open("public/resume.pdf", "_blank"); // Opens in new tab
+    window.open("/resume.pdf", "_blank"); // Opens in new tab
   };
 
   return (
