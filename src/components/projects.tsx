@@ -36,7 +36,7 @@ const projects: Project[] = [
 ];
 
 const Projects: React.FC = () => (
-    <section className="max-w-4xl mx-auto py-12 bg-gray-50 dark:bg-gray-900">
+    <section className="max-w-4xl mx-auto py-12  px-4 bg-gray-50 dark:bg-gray-900">
         <h2 className="text-3xl font-bold text-left mb-8 text-black">
             Projects
         </h2>
@@ -51,7 +51,7 @@ const Projects: React.FC = () => (
                     <div className="p-6 flex flex-col flex-1">
                         <h3
                             id={`project-${project.name}`}
-                            className="text-xl font-semibold mb-2 text-indigo-600 dark:text-indigo-300"
+                            className="text-xl font-semibold mb-2 text-blue-600 dark:text-blue-300"
                         >
                             {project.name}
                         </h3>
@@ -69,7 +69,7 @@ const Projects: React.FC = () => (
                                 {project.technologies.map((tech) => (
                                     <span
                                         key={tech}
-                                        className="text-sm bg-indigo-50 dark:bg-indigo-900/40 text-indigo-700 dark:text-indigo-200 px-2 py-1 rounded-md"
+                                        className="text-sm bg-blue-50 dark:bg-blue-900/40 text-blue-700 dark:text-blue-200 px-2 py-1 rounded-md"
                                     >
                                         {tech}
                                     </span>
@@ -82,7 +82,7 @@ const Projects: React.FC = () => (
                                 href={project.liveLink}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-4 py-2 rounded-md transition-colors"
+                                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-md transition-colors"
                             >
                                 Live Site
                             </a>

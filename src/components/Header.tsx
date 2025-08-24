@@ -24,17 +24,17 @@ export default function Header() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
         <div className="max-w-4xl mx-auto flex items-center">
-          <div className="ml-6">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4">SONU BHAGAT</h1>
-            <h2 className="text-sm md:text-2xl mb-6 text-justify">
-              Full-Stack Digital Strategist | SEO/SEM, PPC & Social Media | UI/UX & Web Development
-            </h2>
-            <p className="text-base md:text-lg mb-6 text-justify">
-  A multifaceted Digital Marketing Strategist with over 4 years of experience architecting and executing comprehensive digital campaigns from conception to delivery. I specialize in leveraging data-driven insights from <strong>Google Ads, Facebook Ads, SEO, and SEM</strong> to create targeted campaigns that optimize ROI and enhance brand visibility. My marketing expertise is complemented by <strong>2 years of hands-on experience</strong> in web development and design. As a proficient <strong>Graphic and UI/UX Designer</strong>, I create compelling, user-centric experiences. My technical toolkit is robust, including <strong>WordPress, HTML, CSS, JavaScript, React.js, Next.js, and Tailwind CSS</strong>, allowing me to build and manage high-performance, responsive websites. This unique ability to merge marketing strategy with technical execution enables me to deliver cohesive, end-to-end digital solutions that drive sustainable business growth.
-</p>
+          <div className=" w-full p-8 rounded-2xl bg-black/30 border border-white/80 backdrop-blur-md shadow-lg text-white">
+        <h1 className="text-3xl md:text-5xl font-bold mb-4 text-center md:text-left">SONU BHAGAT</h1>
+        <h2 className="text-xl md:text-2xl mb-6 text-center md:text-left">
+          Full-Stack Digital Strategist | SEO/SEM, PPC & Social Media | UI/UX & Web Development
+        </h2>
+        <p className="text-base md:text-lg mb-6 text-justify">
+          A multifaceted Digital Marketing Strategist with over 4 years of experience architecting and executing comprehensive digital campaigns from conception to delivery. I specialize in leveraging data-driven insights from <strong>Google Ads, Facebook Ads, SEO, and SEM</strong> to create targeted campaigns that optimize ROI and enhance brand visibility. My marketing expertise is complemented by <strong>2 years of hands-on experience</strong> in web development and design. As a proficient <strong>Graphic and UI/UX Designer</strong>, I create compelling, user-centric experiences. My technical toolkit is robust, including <strong>WordPress, HTML, CSS, JavaScript, React.js, Next.js, and Tailwind CSS</strong>, allowing me to build and manage high-performance, responsive websites. This unique ability to merge marketing strategy with technical execution enables me to deliver cohesive, end-to-end digital solutions that drive sustainable business growth.
+        </p>
 
-            <Contact />
-            
+        <Contact />
+        
           </div>
         </div>
       </div>
