@@ -13,15 +13,8 @@ const Work = () => {
     { id: 1, title: "Creative Design 5", image: "flyer.jpg" },
   ];
 
-  const websites = [
-    { id: 1, name: "Malgudi Junction", url: "https://malgudijunction.in" },
-    { id: 2, name: "Website 2", url: "https://example2.com" },
-    { id: 3, name: "Website 3", url: "https://example3.com" },
-  ];
-
   return (
-    <div className="container mx-auto p-6">
-      
+    <div className="max-w-4xl mx-auto p-6">
       <section className="mb-16">
         <h2 className="text-3xl font-semibold mb-6 text-gray-700">Creative Designs</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

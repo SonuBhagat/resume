@@ -1,6 +1,13 @@
+import type { LucideIcon } from 'lucide-react';
 import { BarChart, Target, Search, Paintbrush, Database, Share, Globe } from 'lucide-react';
 
-export const skillsData = [
+export type SkillCategory = {
+  category: string;
+  icon: LucideIcon;
+  skills: string[];
+};
+
+export const skillsData: SkillCategory[] = [
   {
     category: 'Digital Marketing Specialist',
     icon: BarChart,
@@ -24,8 +31,7 @@ export const skillsData = [
       'Google Ads',
       'Facebook Ads Manager',
       'LinkedIn Ads',
-      'X Ads (Formerly know as Twitter)',
-
+      'X Ads (formerly Twitter)'
     ]
   },
   {
@@ -54,7 +60,7 @@ export const skillsData = [
       'Corel Draw',
       'Canva',
       'Figma',
-      'Adobe Indesign'
+      'Adobe InDesign'
     ]
   },
   {
@@ -65,6 +71,7 @@ export const skillsData = [
       'Elementor',
       'Divi',
       'WPBakery',
+      'Wix'
     ]
   },
   {
@@ -82,7 +89,7 @@ export const skillsData = [
   },
   {
     category: 'Frontend Development',
-    icon: Share,
-    skills: ['HTML', 'CSS', 'Bootstrap-5', 'JavaScript', 'ReactJS', 'Tailwind CSS']
+    icon: Globe,
+    skills: ['HTML', 'CSS', 'Bootstrap-5', 'JavaScript', 'TypeScript', 'ReactJS', 'NextJS', 'Tailwind CSS']
   }
 ];
