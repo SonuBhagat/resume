@@ -1,97 +1,176 @@
-import React from "react";
+import React, { useState } from 'react';
+import { ExternalLink, Smartphone, Bot, Server, Globe, Cpu, Workflow } from 'lucide-react';
 
 type Project = {
-    name: string;
-    description: string;
-    technologies: string[];
-    liveLink: string;
-    image?: string;
+  name: string;
+  description: string;
+  technologies: string[];
+  category: 'full-stack' | 'ai' | 'web';
+  icon: React.ReactNode;
+  liveLink?: string;
 };
 
 const projects: Project[] = [
-    {
-        name: "Malgudi Junction Restaurant Website",
-        description:
-            "This project is a responsive, single-page website built for Malgudi Junction, a restaurant in Dwarka, Delhi. The goal was to create a modern and visually appealing online presence that showcases their diverse menu and tells their story. The site is fully responsive, ensuring a seamless experience on any device.",
-        technologies: ["HTML", "CSS", "Bootstrap 5", "JavaScript"],
-        liveLink: "https://malgudijunction.in/",
-        image: "/images/portfolio-card.png",
-    },
-    {
-        name: "DayAhead Inc. - Energy Forecasting Platform",
-        description:
-            "This project involved building a professional corporate website for DayAhead Inc., a company specializing in renewable energy forecasting. The primary objective was to create a clean, credible, and informative platform that clearly communicates their specialized services and establishes them as a trusted partner in the energy sector. The website is built to be fully responsive, ensuring a seamless user experience across all devices.",
-        technologies: ["JavaScript", "ReactJS", "Tailwind"],
-        liveLink: "https://dayaheadinc.com/in-en",
-        image: "/images/task-manager-card.png",
-    },
-    {
-        name: "Electrovault Power - Advanced Energy Solutions",
-        description:
-            "Developed a high-performance website for Electrovault Power, a leader in battery storage solutions. The site uses Next.js for server-side rendering, ensuring fast performance and strong SEO. The responsive UI was built with Tailwind CSS for a clean, modern design.",
-        technologies: ["Next.js", "Tailwind CSS"],
-        liveLink: "https://www.electrovault.in/",
-        image: "/images/ecommerce-card.png",
-    },
+  {
+    name: 'Kisaan Sampatti',
+    description:
+      'Android and iOS agricultural digital platform serving 50,000+ farmers, manufacturers, and traders. Contributed to product development, application functionality, integrations, and delivery.',
+    technologies: ['React Native', 'Node.js', 'PostgreSQL', 'REST APIs', 'Android', 'iOS'],
+    category: 'full-stack',
+    icon: <Smartphone className="w-5 h-5" />,
+  },
+  {
+    name: 'AI-Powered WhatsApp RAG Assistant',
+    description:
+      'Built and integrated a conversational AI solution using Retrieval-Augmented Generation (RAG) to provide context-aware access to organizational information through WhatsApp.',
+    technologies: ['Generative AI', 'RAG', 'LLM API', 'WhatsApp API', 'Node.js'],
+    category: 'ai',
+    icon: <Bot className="w-5 h-5" />,
+  },
+  {
+    name: 'Internal CRM Platform',
+    description:
+      'Developed a full-stack internal CRM to centralize business and customer information and streamline internal workflows across the organization.',
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'REST APIs', 'Authentication'],
+    category: 'full-stack',
+    icon: <Server className="w-5 h-5" />,
+  },
+  {
+    name: 'IT Asset Management System',
+    description:
+      'Developed a web application for digital IT asset records, allocation, tracking, and internal operational management.',
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'CRUD', 'Dashboard'],
+    category: 'full-stack',
+    icon: <Cpu className="w-5 h-5" />,
+  },
+  {
+    name: 'OCR Automation',
+    description:
+      'Implemented document and image OCR workflows to automate information extraction and reduce repetitive manual data processing tasks.',
+    technologies: ['OCR', 'Python', 'Automation', 'Document Processing'],
+    category: 'ai',
+    icon: <Workflow className="w-5 h-5" />,
+  },
+  {
+    name: 'Business Process Automation',
+    description:
+      'Built software and AI-assisted workflows to automate repetitive organizational tasks and improve operational efficiency across departments.',
+    technologies: ['AI Workflows', 'Automation', 'Integration', 'Node.js'],
+    category: 'ai',
+    icon: <Workflow className="w-5 h-5" />,
+  },
+  {
+    name: 'Malgudi Junction Restaurant',
+    description:
+      'A responsive, single-page website for Malgudi Junction restaurant in Dwarka, Delhi. Modern and visually appealing design showcasing their diverse menu and story.',
+    technologies: ['HTML', 'CSS', 'Bootstrap 5', 'JavaScript'],
+    category: 'web',
+    icon: <Globe className="w-5 h-5" />,
+    liveLink: 'https://malgudijunction.in/',
+  },
+  {
+    name: 'DayAhead Inc. — Energy Forecasting',
+    description:
+      'Professional corporate website for DayAhead Inc., specializing in renewable energy forecasting. Clean, credible, and informative platform built for all devices.',
+    technologies: ['ReactJS', 'Tailwind CSS', 'JavaScript'],
+    category: 'web',
+    icon: <Globe className="w-5 h-5" />,
+    liveLink: 'https://dayaheadinc.com/in-en',
+  },
+  {
+    name: 'Electrovault Power',
+    description:
+      'High-performance website for Electrovault Power, a leader in battery storage solutions. Built with Next.js for SSR, fast performance, and strong SEO.',
+    technologies: ['Next.js', 'Tailwind CSS'],
+    category: 'web',
+    icon: <Globe className="w-5 h-5" />,
+    liveLink: 'https://www.electrovault.in/',
+  },
 ];
 
-const Projects: React.FC = () => (
-    <section className="max-w-4xl mx-auto py-12  px-4 bg-gray-50 dark:bg-gray-900">
-        <h2 className="text-3xl font-bold text-left mb-8 text-black">
-            Projects
-        </h2>
+const filters = [
+  { label: 'All', value: 'all' },
+  { label: 'Full-Stack', value: 'full-stack' },
+  { label: 'AI & Automation', value: 'ai' },
+  { label: 'Web', value: 'web' },
+];
 
-        <div className="max-w-4xl mx-auto grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 items-stretch">
-            {projects.map((project) => (
-                <article
-                    key={project.name}
-                    className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow h-full flex flex-col overflow-hidden"
-                    aria-labelledby={`project-${project.name}`}
-                >
-                    <div className="p-6 flex flex-col flex-1">
-                        <h3
-                            id={`project-${project.name}`}
-                            className="text-xl font-semibold mb-2 text-blue-600 dark:text-blue-300"
-                        >
-                            {project.name}
-                        </h3>
+export default function Projects() {
+  const [activeFilter, setActiveFilter] = useState('all');
 
-                        <p className="text-gray-700 dark:text-gray-300 mb-4 flex-grow">
-                            {project.description}
-                        </p>
+  const filtered = activeFilter === 'all' ? projects : projects.filter((p) => p.category === activeFilter);
 
-                        <div className="mb-4">
-                            <span className="font-medium text-gray-800 dark:text-gray-200 mr-2">
-                                Technologies:
-                            </span>
+  return (
+    <section id="projects" className="py-20 md:py-28">
+      <div className="section-container">
+        {/* Section Title */}
+        <h2 className="section-title reveal">Projects</h2>
 
-                            <div className="mt-2 flex flex-wrap gap-2">
-                                {project.technologies.map((tech) => (
-                                    <span
-                                        key={tech}
-                                        className="text-sm bg-blue-50 dark:bg-blue-900/40 text-blue-700 dark:text-blue-200 px-2 py-1 rounded-md"
-                                    >
-                                        {tech}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-
-                        <div className="mt-auto pt-2">
-                            <a
-                                href={project.liveLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-4 py-2 rounded-md transition-colors"
-                            >
-                                Live Site
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            ))}
+        {/* Filter Pills */}
+        <div className="flex flex-wrap justify-center gap-2 mb-10 reveal delay-100">
+          {filters.map((f) => (
+            <button
+              key={f.value}
+              onClick={() => setActiveFilter(f.value)}
+              className={`px-4 py-2 rounded text-xs font-semibold uppercase tracking-wider transition-all duration-300 ${
+                activeFilter === f.value
+                  ? 'bg-[var(--accent)] text-[#0a0a0f] shadow-lg'
+                  : 'text-slate-500 bg-white/5 border border-white/5 hover:text-white hover:border-white/10'
+              }`}
+            >
+              {f.label}
+            </button>
+          ))}
         </div>
-    </section>
-);
 
-export default Projects;
+        {/* Project Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {filtered.map((project, idx) => (
+            <article
+              key={project.name}
+              className={`service-card text-left reveal delay-${((idx % 3) + 1) * 100}`}
+            >
+              {/* Icon + Name */}
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-9 h-9 rounded flex items-center justify-center text-[var(--accent)] bg-white/5 border border-white/5">
+                  {project.icon}
+                </div>
+                <h3 className="text-sm font-bold text-white leading-tight">{project.name}</h3>
+              </div>
+
+              {/* Description */}
+              <p className="text-xs text-slate-500 leading-relaxed mb-4">
+                {project.description}
+              </p>
+
+              {/* Technologies */}
+              <div className="flex flex-wrap gap-1.5 mb-4">
+                {project.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="text-[10px] px-2 py-0.5 rounded bg-white/3 text-slate-500 border border-white/5"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {/* Link */}
+              {project.liveLink && (
+                <a
+                  href={project.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs accent-text hover:text-[var(--accent-light)] transition-colors"
+                >
+                  <ExternalLink className="w-3 h-3" />
+                  Live Site
+                </a>
+              )}
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,7 +1,20 @@
 export const contactInfo = {
+  name: 'Sonu Bhagat',
+  title: 'Digital Transformation & Full-Stack Developer',
+  tagline: 'AI Automation | Product Development | Business Process Automation | Digital Marketing',
   email: 'sonu.bhagatx@gmail.com',
-  phone: '+91 8439171577',
-  address: 'Dwarka, Delhi',
+  phone: '+91 84391 71577',
+  address: 'Dwarka, Delhi, India',
   github: 'https://github.com/SonuBhagat',
-  linkedin: 'https://www.linkedin.com/in/sonubhagat/'
+  linkedin: 'https://www.linkedin.com/in/sonubhagat/',
+  summary: 'Full-Stack Developer and Digital Transformation professional with 5+ years of experience across software development, AI-assisted engineering, digital product development, business automation, performance marketing, and analytics. Currently working at Manikaran Power Limited, driving technology, AI, automation, and digital initiatives across 12 sister firms.',
+  targetRoles: [
+    'Full-Stack Developer',
+    'AI Automation Specialist',
+    'Digital Transformation Manager',
+    'Technical Product Manager',
+    'Digital Product Developer',
+    'AI/Business Automation',
+    'Growth & MarTech',
+  ],
 };

@@ -1,45 +1,87 @@
 import React from 'react';
+import { Briefcase, Calendar } from 'lucide-react';
+
+type ExperienceItem = {
+  title: string;
+  company: string;
+  period: string;
+  bullets: string[];
+};
+
+const experiences: ExperienceItem[] = [
+  {
+    title: 'Assistant General Manager – Digital Marketing, AI & Technology',
+    company: 'Manikaran Power Limited',
+    period: 'Dec 2023 – Present',
+    bullets: [
+      'Lead and contribute to digital transformation, software development, AI automation, and digital marketing initiatives across 12 sister firms.',
+      'Translate business and operational requirements into full-stack web applications, mobile products, APIs, databases, automated workflows, and AI-enabled solutions.',
+      'Use AI-assisted development to accelerate coding, debugging, refactoring, prototyping, API integration, testing, and delivery while reviewing and validating implementation.',
+      'Contributed to the development and enhancement of Kisaan Sampatti, an Android and iOS agricultural platform serving 50,000+ farmers, manufacturers, and traders.',
+      'Develop and maintain internal business applications, including an internal CRM platform for structured customer/business information and workflow management.',
+      'Developed a web-based IT Asset Management application for digital asset records, allocation, tracking, and operational management.',
+      'Developed/integrated an AI-powered WhatsApp chatbot using Retrieval-Augmented Generation (RAG) to enable natural-language access to organizational information.',
+      'Implemented OCR-based automation to extract and process information from documents and images, reducing repetitive manual data processing.',
+      'Identify repetitive internal processes and build software/AI workflows to automate information retrieval, document processing, and operational tasks.',
+      'Work across frontend and backend development, including application interfaces, business logic, APIs, database integration, authentication, and real-time functionality.',
+      'Plan, execute, monitor, and optimize digital campaigns across Google, Meta, and LinkedIn, focusing on lead generation, conversions, audience targeting, and ROI.',
+      'Develop SEO, SEM, social media, analytics, and conversion optimization strategies and use Google Analytics, GTM, and Search Console for performance measurement.',
+    ],
+  },
+  {
+    title: 'Digital Marketing & Graphic Designer',
+    company: 'Vinayak Ply Industries',
+    period: 'Aug 2021 – Nov 2023',
+    bullets: [
+      'Managed SEO, SEM, social media marketing, and digital advertising initiatives to improve online visibility, website traffic, and lead generation.',
+      'Conducted keyword research, on-page SEO, technical optimization, and content optimization to improve organic search performance.',
+      'Developed, customized, and maintained WordPress websites, including responsive design, theme customization, content management, and performance optimization.',
+      'Designed advertising banners, social media creatives, promotional graphics, and website layouts for digital campaigns.',
+      'Implemented conversion tracking and A/B testing to evaluate campaign performance and improve lead quality.',
+      'Used analytics and campaign data to identify optimization opportunities across websites and digital marketing channels.',
+    ],
+  },
+];
 
 export default function Experience() {
   return (
-    <section className="py-16 bg-white" id="experience">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8">Experience</h2>
+    <section id="experience" className="py-20 md:py-28">
+      <div className="section-container">
+        {/* Section Title */}
+        <h2 className="section-title reveal">Experience</h2>
 
-          {/* First Experience */}
-          <div className="border-l-4 border-blue-600 pl-4 py-2">
-            <h3 className="text-xl font-semibold">
-              Jr. Manager Digital Marketer & Graphic Designer
-            </h3>
-            <p className="text-blue-600 font-medium">Manikaran Power Limited</p>
-            <p className="text-gray-600 text-sm mb-2">Dec 2023 – Present</p>
-            <p className="text-gray-700 text-justify leading-relaxed">
-              As a dedicated <span className="font-semibold text-blue-600">Digital Marketing Strategist</span> at Manikaran Power Limited, I architect and execute comprehensive digital strategies for <span className="font-semibold text-blue-600">B2B and Tier 1 clients</span>. 
-              My expertise in <span className="font-semibold text-blue-600">Google Ads</span>, <span className="font-semibold text-blue-600">Facebook Ads</span>, <span className="font-semibold text-blue-600">SEO</span>, and <span className="font-semibold text-blue-600">SEM</span> allows me to create targeted, data-driven campaigns that enhance brand visibility and maximize ROI. 
-              I complement my marketing skills with a strong foundation in <span className="font-semibold text-blue-600">Graphic Design</span> and <span className="font-semibold text-blue-600">UI/UX</span>, ensuring every touchpoint is visually compelling and user-centric. 
-              My technical proficiency extends to web development, where I build and manage high-performance websites using <span className="font-semibold text-blue-600">WordPress</span>, <span className="font-semibold text-blue-600">HTML</span>, <span className="font-semibold text-blue-600">CSS</span>, <span className="font-semibold text-blue-600">JavaScript</span>, <span className="font-semibold text-blue-600">React.js</span>, and <span className="font-semibold text-blue-600">Next.js</span>. 
-              This unique ability to merge marketing acumen with technical execution allows me to deliver cohesive, end-to-end digital solutions that drive sustainable growth.
-            </p>
-          </div>
+        {/* Experience Cards */}
+        <div className="space-y-8">
+          {experiences.map((exp, idx) => (
+            <div
+              key={idx}
+              className={`glass-card-hover p-6 md:p-8 reveal delay-${(idx + 1) * 200}`}
+            >
+              <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
+                <div>
+                  <h3 className="text-base md:text-lg font-bold text-white mb-1">
+                    {exp.title}
+                  </h3>
+                  <p className="flex items-center gap-2 text-sm accent-text font-semibold">
+                    <Briefcase className="w-3.5 h-3.5" />
+                    {exp.company}
+                  </p>
+                </div>
+                <span className="flex items-center gap-1.5 text-xs text-slate-500 bg-white/5 px-3 py-1 rounded">
+                  <Calendar className="w-3 h-3" />
+                  {exp.period}
+                </span>
+              </div>
 
-          {/* Second Experience */}
-          <div className="border-l-4 border-blue-600 pl-4 py-2 mt-8">
-            <h3 className="text-xl font-semibold">
-              Digital Marketing & Graphic Designer
-            </h3>
-            <p className="text-blue-600 font-medium">Vinayak Ply Industries</p>
-            <p className="text-gray-600 text-sm mb-2">Aug 2021 – Nov 2023</p>
-            <p className="text-gray-700 text-justify leading-relaxed">
-              Managing the entire design process, from conception to delivery. Interdepartmental collaboration and communication are areas in which I excel. 
-              Skilled in <span className="font-semibold text-blue-600">Adobe Creative Suite (Illustrator, Photoshop, InDesign)</span>, 
-              <span className="font-semibold text-blue-600"> Microsoft Office Suite</span>, 
-              <span className="font-semibold text-blue-600"> Digital Marketing (SEO, SMM, SMO, On-Page SEO, OFF-Page SEO)</span>, 
-              and <span className="font-semibold text-blue-600">Paid Ads</span> on all platforms including <span className="font-semibold text-blue-600">Google Ads, Facebook, Instagram, LinkedIn</span>, and others, 
-              as well as managing the <span className="font-semibold text-blue-600">Vinayak Ply website</span>.
-            </p>
-          </div>
-
+              <ul className="space-y-2.5">
+                {exp.bullets.map((bullet, i) => (
+                  <li key={i} className="text-sm text-slate-400 leading-relaxed pl-3 border-l border-white/10">
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
     </section>

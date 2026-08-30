@@ -1,95 +1,97 @@
 import type { LucideIcon } from 'lucide-react';
-import { BarChart, Target, Search, Paintbrush, Database, Share, Globe } from 'lucide-react';
+import { Code2, Database, Bot, BarChart3, Palette } from 'lucide-react';
 
 export type SkillCategory = {
   category: string;
   icon: LucideIcon;
   skills: string[];
+  gradient: string;
 };
 
 export const skillsData: SkillCategory[] = [
   {
-    category: 'Digital Marketing Specialist',
-    icon: BarChart,
+    category: 'Full-Stack Development',
+    icon: Code2,
+    gradient: 'from-indigo-500 to-violet-500',
     skills: [
-      'Google Analytics',
-      'Google Tag Manager',
-      'Adobe Analytics',
-      'HubSpot',
-      'ActiveCampaign',
-      'Mailchimp',
-      'SEMrush',
-      'Ahrefs',
-      'SimilarWeb',
-      'Meta Pixel'
-    ]
+      'React',
+      'React Native',
+      'JavaScript',
+      'TypeScript',
+      'HTML5',
+      'CSS3',
+      'Node.js',
+      'Express.js',
+      'REST APIs',
+      'WebSockets',
+      'Socket.IO',
+      'Responsive Web Apps',
+      'Android & iOS',
+    ],
   },
   {
-    category: 'PPC Ads Specialist',
-    icon: Target,
+    category: 'Backend & Data',
+    icon: Database,
+    gradient: 'from-cyan-500 to-blue-500',
+    skills: [
+      'PostgreSQL',
+      'SQL',
+      'Redis',
+      'Database Design',
+      'Authentication & Authorization',
+      'API Integration',
+      'Real-time Communication',
+    ],
+  },
+  {
+    category: 'AI & Automation',
+    icon: Bot,
+    gradient: 'from-violet-500 to-purple-500',
+    skills: [
+      'Generative AI',
+      'LLM API Integration',
+      'AI-Assisted Coding',
+      'RAG',
+      'AI Chatbots',
+      'WhatsApp AI',
+      'OCR Automation',
+      'Workflow Automation',
+      'Document Processing',
+    ],
+  },
+  {
+    category: 'Digital Marketing',
+    icon: BarChart3,
+    gradient: 'from-emerald-500 to-teal-500',
     skills: [
       'Google Ads',
-      'Facebook Ads Manager',
+      'Meta Ads',
       'LinkedIn Ads',
-      'X Ads (formerly Twitter)'
-    ]
+      'PPC',
+      'SEO',
+      'SEM',
+      'Social Media Marketing',
+      'CRO',
+      'Google Analytics',
+      'GTM',
+      'Search Console',
+      'A/B Testing',
+    ],
   },
   {
-    category: 'SEO/SEM Expert',
-    icon: Search,
+    category: 'Product & Design',
+    icon: Palette,
+    gradient: 'from-pink-500 to-rose-500',
     skills: [
-      'Ahrefs',
-      'SEMrush',
-      'Moz',
-      'Screaming Frog',
-      'Ubersuggest',
-      'Keyword Planner',
-      'AnswerThePublic',
-      'Sitebulb',
-      'DeepCrawl',
-      'Off-page SEO',
-      'On-page SEO'
-    ]
-  },
-  {
-    category: 'Graphic & UI/UX Designer',
-    icon: Paintbrush,
-    skills: [
-      'Adobe Photoshop',
-      'Adobe Illustrator',
-      'Corel Draw',
-      'Canva',
+      'Product Development',
+      'UI/UX',
       'Figma',
-      'Adobe InDesign'
-    ]
-  },
-  {
-    category: 'CMS Developer (WordPress, etc.)',
-    icon: Database,
-    skills: [
+      'Responsive Design',
+      'Mobile-first Design',
       'WordPress',
-      'Elementor',
-      'Divi',
-      'WPBakery',
-      'Wix'
-    ]
-  },
-  {
-    category: 'Social Media Manager',
-    icon: Share,
-    skills: [
-      'Buffer',
-      'Hootsuite',
-      'Later',
-      'Sprout Social',
-      'SocialBee',
+      'Photoshop',
+      'Illustrator',
       'Canva',
-      'Adobe Express'
-    ]
+    ],
   },
-  {
-    category: 'Frontend Development',
-    icon: Globe,
-    skills: ['HTML', 'CSS', 'Bootstrap-5', 'JavaScript', 'TypeScript', 'ReactJS', 'NextJS', 'Tailwind CSS']
-  }
 ];

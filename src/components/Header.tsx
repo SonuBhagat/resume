@@ -1,44 +1,103 @@
-import React from "react";
-import Contact from "./Contact";
+import React, { useEffect, useState } from 'react';
+import { ArrowDown } from 'lucide-react';
+
+const roles = [
+  'AI Automation',
+  'Product Development',
+  'Business Process Automation',
+  'Full-Stack Development',
+];
 
 export default function Header() {
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
 
-  const openResume = () => {
-    window.open("/resume.pdf", "_blank"); // Opens in new tab
+  useEffect(() => {
+    const currentRole = roles[roleIndex];
+    let timeout: ReturnType<typeof setTimeout>;
+
+    if (!isDeleting) {
+      if (displayText.length < currentRole.length) {
+        timeout = setTimeout(() => {
+          setDisplayText(currentRole.slice(0, displayText.length + 1));
+        }, 60);
+      } else {
+        timeout = setTimeout(() => setIsDeleting(true), 2000);
+      }
+    } else {
+      if (displayText.length > 0) {
+        timeout = setTimeout(() => {
+          setDisplayText(currentRole.slice(0, displayText.length - 1));
+        }, 30);
+      } else {
+        setIsDeleting(false);
+        setRoleIndex((prev) => (prev + 1) % roles.length);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, roleIndex]);
+
+  const scrollDown = (e: React.MouseEvent) => {
+    e.preventDefault();
+    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <header className="relative w-full h-screen flex items-center justify-center text-white">
+    <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
-      <video 
-        className="absolute top-0 left-0 w-full h-full object-cover"
-        src="/video.webm" 
-        autoPlay 
-        loop 
-        muted 
-      />
-
-      {/* Dark Overlay */}
-      <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+      <div className="hero-bg">
+        <video
+          src="/video.webm"
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full object-cover"
+        />
+      </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4">
-        <div className="max-w-4xl mx-auto flex items-center">
-          <div className=" w-full p-8 rounded-2xl bg-black/30 border border-white/80 backdrop-blur-md shadow-lg text-white">
-        <h1 className="text-3xl md:text-5xl font-bold mb-4 text-center md:text-left">SONU BHAGAT</h1>
-        <h2 className="text-xl md:text-2xl mb-6 text-center md:text-left">
-          Full-Stack Digital Strategist | SEO/SEM, PPC & Social Media | UI/UX & Web Development
-        </h2>
-        <p className="text-base md:text-lg mb-6 text-justify">
-          A multifaceted Digital Marketing Strategist with over 4 years of experience architecting and executing comprehensive digital campaigns from conception to delivery. I specialize in leveraging data-driven insights from <strong>Google Ads, Facebook Ads, SEO, and SEM</strong> to create targeted campaigns that optimize ROI and enhance brand visibility. My marketing expertise is complemented by <strong>2 years of hands-on experience</strong> in web development and design. As a proficient <strong>Graphic and UI/UX Designer</strong>, I create compelling, user-centric experiences. My technical toolkit is robust, including <strong>WordPress, HTML, CSS, JavaScript, React.js, Next.js, and Tailwind CSS</strong>, allowing me to build and manage high-performance, responsive websites. This unique ability to merge marketing strategy with technical execution enables me to deliver cohesive, end-to-end digital solutions that drive sustainable business growth.
+      <div className="relative z-10 text-center px-6">
+        <p className="text-sm md:text-base text-slate-400 tracking-widest uppercase mb-4 reveal">
+          Digital Transformation & Full-Stack Developer
         </p>
 
-        <Contact />
-        
-          </div>
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 reveal delay-100">
+          Hi, I am{' '}
+          <span className="accent-text">Sonu Bhagat</span>
+        </h1>
+
+        {/* Typing Effect */}
+        <div className="h-7 mb-8 flex items-center justify-center reveal delay-200">
+          <span className="text-slate-400 font-mono text-sm md:text-base tracking-wide">
+            {displayText}
+            <span className="inline-block w-[2px] h-4 ml-1 bg-[var(--accent)] animate-pulse" />
+          </span>
+        </div>
+
+        <p className="text-slate-500 text-sm max-w-xl mx-auto leading-relaxed mb-10 reveal delay-300">
+          Full-Stack Developer with 5+ years of experience in software development,
+          AI automation, digital product development, and business process automation.
+        </p>
+
+        {/* CTA */}
+        <div className="flex items-center justify-center gap-4 reveal delay-400">
+          <a href="#projects" className="btn-primary">View Projects</a>
+          <a href="#contact" className="btn-secondary">Contact Me</a>
         </div>
       </div>
-      
+
+      {/* Scroll Indicator */}
+      <button
+        onClick={scrollDown}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-600 hover:text-[var(--accent)] transition-colors"
+        aria-label="Scroll down"
+        style={{ animation: 'bounce-subtle 2s ease-in-out infinite' }}
+      >
+        <ArrowDown className="w-5 h-5" />
+      </button>
     </header>
   );
 }
