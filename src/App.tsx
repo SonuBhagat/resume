@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Navbar from './components/Navbar';
 import Header from './components/Header';
 import About from './components/About';
 import Experience from './components/Experience';
@@ -45,6 +46,7 @@ function App() {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: 'var(--bg-primary)' }}>
+      <Navbar />
       <Header />
       <About />
       <Experience />

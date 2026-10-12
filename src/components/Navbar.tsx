@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, FileDown } from 'lucide-react';
 
 const navLinks = [
   { label: 'About', href: '#about' },
@@ -84,6 +84,19 @@ export default function Navbar() {
 
 
 
+          {/* Desktop Actions */}
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href="/Sonu_Bhagat_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 hover:bg-[var(--accent)]/20 border border-[var(--accent)]/30 transition-all hover:scale-105"
+            >
+              <FileDown className="w-3.5 h-3.5" />
+              <span>Resume PDF</span>
+            </a>
+          </div>
+
           {/* Mobile Hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
@@ -116,7 +129,17 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-
+          <div className="pt-2">
+            <a
+              href="/Sonu_Bhagat_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-xs font-semibold text-[var(--accent)] bg-[var(--accent)]/10 border border-[var(--accent)]/30"
+            >
+              <FileDown className="w-4 h-4" />
+              <span>Download Resume (PDF)</span>
+            </a>
+          </div>
         </div>
       </div>
     </nav>
