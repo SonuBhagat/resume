@@ -151,40 +151,58 @@ export const projectsData: ProjectDetail[] = [
     technologies: ['Generative AI', 'RAG', 'LLM APIs', 'WhatsApp Business API', 'Python', 'OCR', 'Vector Search', 'Node.js', 'Excel Automation']
   },
   {
-    id: 'it-asset-management',
-    name: 'Corporate IT Asset Management System',
-    tagline: 'Centralized IT Asset Records, Hardware Allocation & Lifecycle Tracking Platform',
-    badge: 'Internal Enterprise Portal',
-    badgeColor: 'border-blue-500/40 text-blue-400 bg-blue-500/10',
-    category: 'full-stack',
+    id: 'ai-hrms-operations',
+    name: 'AI-Powered HRMS, ATS & Enterprise IT Operations Suite',
+    tagline: 'End-to-End Enterprise HRMS with OCR & LLM Resume Screening (ATS), Digital Onboarding, IT Asset Inventory & AI Helpdesk Ticketing',
+    badge: 'AI ATS • Onboarding • IT Ticketing',
+    badgeColor: 'border-fuchsia-500/40 text-fuchsia-400 bg-fuchsia-500/10',
+    category: 'ai',
     featured: true,
-    iconType: 'cpu',
-    companyOrContext: 'Manikaran Power Group',
+    iconType: 'workflow',
+    companyOrContext: 'Enterprise Group Operations',
     shortDescription:
-      'Web-based operational management application tracking IT hardware, software licenses, lifecycle depreciation, department allocations, and employee asset handovers across the enterprise.',
+      'Unified enterprise platform combining an intelligent ATS with OCR & LLM-based resume screening, digital joining/onboarding workflows, comprehensive IT asset inventory tracking, AI-enabled IT ticketing & helpdesk automation, and a self-service employee portal.',
     detailedOverview:
-      'Developed a comprehensive internal IT asset tracking solution to digitize asset inventory management. The platform centralizes hardware specifications, procurement dates, warranty expirations, software license keys, and employee assignment logs, eliminating manual spreadsheet record-keeping.',
+      'Architected and delivered an integrated AI HRMS & Operations ecosystem that streamlines the entire employee lifecycle—from talent acquisition to IT offboarding. The platform replaces disjointed tools with a cohesive system featuring an intelligent ATS that uses OCR and LLMs for semantic resume parsing and candidate ranking, paperless onboarding with automated compliance verification, complete IT asset inventory management across all hardware and software, AI-powered IT service desk ticketing with automated resolution routing, and a modern employee self-service portal.',
     keyFeatures: [
-      'Complete asset lifecycle management from procurement, assignment, maintenance to decommissioning.',
-      'Employee allocation history and digital asset sign-off acknowledgement.',
-      'Warranty tracking and automated renewal notifications for software licenses.',
-      'Interactive dashboard visualizing asset utilization, depreciation, and department-wise allocation stats.'
+      'OCR & LLM-Powered ATS: Automated resume parsing from scanned PDFs, Word docs, and portfolios, extracting skills, experience, and scoring candidates against job descriptions using semantic matching.',
+      'Paperless Joining & Digital Onboarding: Automated employee dossier creation, document verification, policy sign-offs, and multi-department joining approval chains.',
+      'Comprehensive IT Asset Inventory: End-to-end tracking of all hardware (laptops, desktops, monitors, peripherals), software licenses, cloud accounts, warranty cycles, and digital asset allocation acknowledgements.',
+      'AI-Enabled IT Ticketing & Service Desk: Natural-language ticket submission where LLMs categorize issues, detect urgency, auto-suggest self-help fixes, and route complex escalations to IT engineers.',
+      'Employee Self-Service (ESS) Portal: Centralized dashboard for employees to access profiles, check assigned IT assets, raise service tickets, view organizational updates, and submit requests.',
+      'Role-Based Access Control (RBAC): Strict permission boundaries for HR administrators, IT asset managers, department heads, and employees.'
     ],
     architectureHighlights: [
-      'React frontend with instant filtering, search, and dynamic data tables.',
-      'Node.js REST API with granular CRUD controls and audit history tracking.',
-      'PostgreSQL schema with relational asset-employee-department linkages.'
+      'React & Tailwind CSS frontend engineered with responsive dashboards, interactive candidate pipelines, and real-time ticket monitors.',
+      'Node.js & Express microservices orchestrating business workflows, authentication, and service desk queues.',
+      'Python OCR & LLM pipeline using vision/document parsers and LLM embeddings for structured JSON resume extraction and candidate scoring.',
+      'PostgreSQL database schema with relational models for candidate profiles, employees, assets, tickets, and audit trails.',
+      'Redis cache & real-time notification engine for instant ticket updates and onboarding status alerts.'
     ],
     impactHighlights: [
-      'Replaced error-prone spreadsheets with a real-time single source of truth.',
-      '100% accountability for IT asset allocations and warranty schedules.'
+      'Cut candidate resume screening and shortlist turnaround time by over 70% using OCR + LLM parsing.',
+      'Accelerated employee joining and equipment provisioning from days to under 4 hours.',
+      '100% real-time accountability across company-wide IT hardware inventory and software licenses.',
+      'Automated resolution of ~40% of routine IT support queries through AI-assisted troubleshooting.'
     ],
     metrics: [
-      { label: 'Tracking', value: '100% IT Assets' },
-      { label: 'Lifecycle', value: 'Procure to Retire' },
-      { label: 'Stack', value: 'React + Node + SQL' }
+      { label: 'Screening Gain', value: '70% Faster ATS' },
+      { label: 'Asset Tracking', value: '100% IT Inventory' },
+      { label: 'Ticketing', value: 'AI-Powered Triage' },
+      { label: 'Platform Scope', value: 'Unified HRMS & IT' }
     ],
-    technologies: ['React', 'Node.js', 'PostgreSQL', 'REST APIs', 'Enterprise Dashboards', 'Tailwind CSS']
+    technologies: [
+      'React',
+      'Node.js',
+      'Python',
+      'LLM APIs',
+      'OCR Pipelines',
+      'PostgreSQL',
+      'Redis',
+      'REST APIs',
+      'RBAC',
+      'Tailwind CSS'
+    ]
   },
   {
     id: 'dayahead-inc',

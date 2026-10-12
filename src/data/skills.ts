@@ -55,6 +55,8 @@ export const skillsData: SkillCategory[] = [
       'AI Chatbots',
       'WhatsApp AI',
       'OCR Automation',
+      'ATS & Resume Screening',
+      'AI IT Ticketing',
       'Workflow Automation',
       'Document Processing',
     ],

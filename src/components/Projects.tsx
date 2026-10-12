@@ -314,6 +314,81 @@ export default function Projects() {
                 </button>
               </div>
             </div>
+
+            {/* Spotlight 4: AI HRMS, ATS & IT Ticketing */}
+            <div className="relative rounded-2xl p-6 md:p-8 border border-fuchsia-500/30 bg-gradient-to-br from-fuchsia-950/20 via-[#0e0e16] to-[#0a0a0f] backdrop-blur-md shadow-2xl transition-all hover:border-fuchsia-500/50">
+              <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-11 h-11 rounded-xl bg-fuchsia-500/10 border border-fuchsia-500/30 flex items-center justify-center">
+                    <Workflow className="w-6 h-6 text-fuchsia-400" />
+                  </div>
+                  <div>
+                    <span className="text-[11px] font-bold uppercase tracking-wider text-fuchsia-400">
+                      Enterprise AI HRMS & Operations Platform
+                    </span>
+                    <h3 className="text-xl md:text-2xl font-bold text-white">
+                      AI-Powered HRMS, ATS & IT Operations Suite
+                    </h3>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-fuchsia-500/15 text-fuchsia-300 border border-fuchsia-500/30">
+                    OCR & LLM ATS
+                  </span>
+                  <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-white/5 text-slate-300 border border-white/10">
+                    IT Ticketing & Assets
+                  </span>
+                </div>
+              </div>
+
+              <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                Unified enterprise workforce platform engineered to automate the complete employee lifecycle:
+                featuring an intelligent ATS with OCR & LLM-based resume parsing, paperless digital joining and onboarding,
+                comprehensive IT hardware and software asset inventory tracking of all kinds, an AI-enabled IT helpdesk ticketing tool with
+                smart routing, and a dedicated employee self-service portal.
+              </p>
+
+              {/* Key Metrics row */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6 p-4 rounded-xl bg-white/[0.02] border border-white/5">
+                <div>
+                  <p className="text-[11px] text-slate-400">Resume Screening</p>
+                  <p className="text-lg font-bold text-fuchsia-400">70% Faster ATS</p>
+                </div>
+                <div>
+                  <p className="text-[11px] text-slate-400">IT Inventory</p>
+                  <p className="text-lg font-bold text-white">100% Tracking</p>
+                </div>
+                <div>
+                  <p className="text-[11px] text-slate-400">IT Helpdesk</p>
+                  <p className="text-lg font-bold text-fuchsia-400">AI-Enabled Triage</p>
+                </div>
+                <div>
+                  <p className="text-[11px] text-slate-400">Employee Portal</p>
+                  <p className="text-lg font-bold text-white">Self-Service</p>
+                </div>
+              </div>
+
+              {/* Highlights & Tech */}
+              <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pt-4 border-t border-white/10">
+                <div className="flex flex-wrap gap-1.5">
+                  {['React', 'Node.js', 'Python OCR', 'LLM APIs', 'ATS Screening', 'IT Asset Inventory', 'AI Ticketing', 'PostgreSQL', 'RBAC'].map((tech) => (
+                    <span
+                      key={tech}
+                      className="text-[11px] px-2.5 py-1 rounded bg-white/5 text-slate-300 border border-white/10"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+                <button
+                  onClick={() => setSelectedProject(projectsData[3])}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-fuchsia-500/20 hover:bg-fuchsia-500/30 text-fuchsia-300 text-xs font-semibold transition-all self-start md:self-auto border border-fuchsia-500/30"
+                >
+                  View HRMS & AI Operations Specs
+                  <ChevronRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            </div>
           </div>
         )}
 

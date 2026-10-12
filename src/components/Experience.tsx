@@ -27,7 +27,7 @@ const experiences: ExperienceItem[] = [
       'Designed and deployed an internal CRM and client onboarding platform for Power & Solar Solutions, streamlining multi-step KYC verification, document ingestion, and compliance workflows.',
       'Architected and integrated an AI-powered WhatsApp chatbot utilizing Retrieval-Augmented Generation (RAG) to provide natural-language querying of corporate SOPs, regulatory documents, and policies.',
       'Automated repetitive manual Excel-based data entry, reconciliation, and reporting workflows using LLM and OCR pipelines, drastically reducing manual processing time across departments.',
-      'Developed a web-based IT Asset Management application to digitize hardware/software tracking, employee allocation records, and lifecycle auditing.',
+      'Engineered an AI-powered HRMS and operations suite incorporating OCR & LLM-based ATS resume screening, paperless employee onboarding, comprehensive IT hardware/software asset inventory, and an AI-enabled IT helpdesk ticketing tool with an employee self-service portal.',
       'Leveraged AI-assisted development methodologies to accelerate prototyping, code refactoring, API integration, debugging, and software delivery while enforcing high code quality standards.',
       'Full-stack engineering across modern web and mobile stacks: React, React Native, Node.js, Express, PostgreSQL, Redis, REST APIs, WebSockets, and secure role-based access control.',
       'Planned and executed performance digital marketing campaigns across Google Ads, Meta Ads, and LinkedIn Ads; engineered SEO, SEM, CRO, and analytics tracking with GTM and Google Analytics.'
@@ -37,7 +37,7 @@ const experiences: ExperienceItem[] = [
       { name: 'CRM Onboarding Portal', tag: 'Enterprise CRM' },
       { name: 'Corporate WhatsApp RAG Assistant', tag: 'Generative AI' },
       { name: 'Document OCR Automation', tag: 'Workflow Automation' },
-      { name: 'IT Asset Management', tag: 'Enterprise Portal' }
+      { name: 'AI HRMS & IT Operations Suite', tag: 'ATS & Helpdesk AI' }
     ]
   },
   {
