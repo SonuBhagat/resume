@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail, MapPin, Phone, ArrowUpRight, Award, Briefcase, FileDown } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Phone, ArrowUpRight, Award, Briefcase } from 'lucide-react';
 import { contactInfo } from '../data/contact';
 
 export default function About() {
@@ -128,16 +128,6 @@ export default function About() {
                   className="ml-2 text-xs font-semibold text-[var(--accent)] hover:text-[var(--accent-light)] inline-flex items-center gap-1 transition-colors"
                 >
                   Explore Projects <ArrowUpRight className="w-3.5 h-3.5" />
-                </a>
-
-                <a
-                  href="/Sonu_Bhagat_Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="ml-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-[var(--accent)] text-[#0a0a0f] hover:brightness-110 transition-all shadow-md"
-                >
-                  <FileDown className="w-3.5 h-3.5" />
-                  Download CV
                 </a>
               </div>
             </div>
