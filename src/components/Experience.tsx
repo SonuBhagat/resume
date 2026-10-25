@@ -14,7 +14,7 @@ type ExperienceItem = {
 
 const experiences: ExperienceItem[] = [
   {
-    title: 'Assistant General Manager – Digital Marketing, AI & Technology',
+    title: 'Assistant Manager – Digital Marketing, AI & Technology',
     company: 'Manikaran Power Limited',
     period: 'Dec 2023 – Present',
     location: 'Delhi, India',

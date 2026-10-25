@@ -25,7 +25,7 @@ export default function About() {
               <div className="mt-4 p-3 rounded-xl bg-white/[0.03] border border-white/10 text-center">
                 <p className="text-[11px] text-slate-400">Current Role</p>
                 <p className="text-xs font-bold text-[var(--accent)]">
-                  AGM — Digital Marketing, AI & Tech
+                  Assistant Manager — Digital Marketing, AI & Tech
                 </p>
                 <p className="text-[10px] text-slate-500">Manikaran Power Limited</p>
               </div>
